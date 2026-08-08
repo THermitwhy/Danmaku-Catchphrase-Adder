@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Danmaku Catchphrase Adder",
+  "version": "1.0.0",
+  "description": "自动给B站直播弹幕添加字符",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "弹幕前后缀配置",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://live.bilibili.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

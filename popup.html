@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>弹幕前后缀配置</title>
+
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <main class="popup">
+    <h1>弹幕前后缀配置</h1>
+    <p id="current-room" class="current-room">当前房间号：未识别</p>
+
+    <section class="form" aria-label="添加房间配置">
+      <label>
+        房间号
+        <input id="room-id" type="text" inputmode="numeric" placeholder="例如 1700301235">
+      </label>
+      <label>
+        前缀
+        <input id="prefix" type="text" placeholder="可留空">
+      </label>
+      <label>
+        后缀
+        <input id="suffix" type="text" placeholder="可留空">
+      </label>
+      <button id="save" type="button">保存配置</button>
+    </section>
+
+    <section class="list-section" aria-label="已保存配置">
+      <div class="list-title">已保存配置</div>
+      <div id="config-list" class="config-list"></div>
+    </section>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
